@@ -21,7 +21,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QTimer>
 #include <QTime>
 
-//#include "dashboard/upower.h"
+#include <csys/upower.h>
 #include <cprime/utilities.h>
 
 
@@ -42,6 +42,7 @@ private:
     UPower *u;
 
     void batteryCheck();
+
 };
 
 #endif // WBATTERY_H

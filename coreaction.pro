@@ -4,14 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets dbus network
 
 TARGET = coreaction
 TEMPLATE = app
 
 # library for theme and components
-unix:!macx: LIBS += /usr/lib/libcprime.a
-unix:!macx: LIBS += /usr/lib/libcsys.a
+unix:!macx: LIBS += -lcprime
+unix:!macx: LIBS += -L/usr/lib -lcsys
 
 FORMS += \
     coreaction.ui \
@@ -40,6 +40,9 @@ SOURCES += \
     wnetwork.cpp \
     wnotes.cpp \
     wsystem.cpp
+
+RESOURCES += \
+    icons.qrc
 
 # Disable warnings, enable threading support and c++11
 CONFIG += thread silent build_all c++11
@@ -80,3 +83,4 @@ unix {
 
 DEFINES += QT_DEPRECATED_WARNINGS
 DEFINES += "HAVE_POSIX_OPENPT"
+

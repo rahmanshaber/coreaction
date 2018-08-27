@@ -24,7 +24,7 @@ coreaction::coreaction(QWidget *parent) : QWidget(parent, Qt::Dialog),ui(new Ui:
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(":/appStyle/style/CoreAction.qss"));
+    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::CoreActionStyle));
 
     widget();
     widgetList();
@@ -58,11 +58,8 @@ void coreaction::tryicon()  //setup coreaction tryicon
     trayIcon=new QSystemTrayIcon(this);
     trayIconMenu=new QMenu(this);
     QAction *QAshow=new QAction("&Show",this);
-    QAction *QAabout=new QAction("&About",this);
     QAction *QAquit=new QAction("&Quit",this);
     trayIconMenu->addAction(QAshow);
-    trayIconMenu->addAction(QAabout);
-    trayIconMenu->addSeparator();
     trayIconMenu->addAction(QAquit);
     trayIcon->setContextMenu(trayIconMenu);
     trayIcon->setIcon(QIcon(":/app/icons/app-icons/CoreAction.svg"));
@@ -71,7 +68,6 @@ void coreaction::tryicon()  //setup coreaction tryicon
 
     connect(QAquit, SIGNAL(triggered()),this,SLOT(close()));
     connect(QAshow, SIGNAL(triggered()),this,SLOT(actionshow()));
-    connect(QAabout, &QAction::triggered, this, &coreaction::coreBoxAbout);
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(ShowWindow(QSystemTrayIcon::ActivationReason)));
 }
 
@@ -205,12 +201,6 @@ void coreaction::actionshow()
     this->show();
 }
 
-void coreaction::coreBoxAbout()
-{
-    about *ab = new about();
-    ab->show();
-}
-
 void coreaction::showTime()
 {
     QTime time = QTime::currentTime();
@@ -249,37 +239,37 @@ void coreaction::ShowWindow(QSystemTrayIcon::ActivationReason Reason)
 
 void coreaction::on_corepad_clicked()
 {
-    GlobalFunc::appEngines("CorePad","");
+    GlobalFunc::systemAppOpener("CorePad","");
     this->hide();
 }
 
 void coreaction::on_screenshot_clicked()
 {
-    GlobalFunc::appEngines("CoreShot","");
+    GlobalFunc::systemAppOpener("CoreShot","");
     this->hide();
 }
 
 void coreaction::on_corepaint_clicked()
 {
-    GlobalFunc::appEngines("CorePaint","");
+    GlobalFunc::systemAppOpener("CorePaint","");
     this->hide();
 }
 
 void coreaction::on_corefm_clicked()
 {
-    GlobalFunc::appEngines("CoreFM","");
+    GlobalFunc::systemAppOpener("CoreFM","");
     this->hide();
 }
 
 void coreaction::on_start_clicked()
 {
-    GlobalFunc::appEngines("Start","");
+    GlobalFunc::systemAppOpener("Start","");
     this->hide();
 }
 
 void coreaction::on_search_clicked()
 {
-    GlobalFunc::appEngines("Search","");
+    GlobalFunc::systemAppOpener("Search","");
     this->hide();
 }
 

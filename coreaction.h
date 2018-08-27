@@ -39,8 +39,6 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 
 #include <cprime/globalfunctions.h>
 #include <cprime/settingsmanage.h>
-//#include "about/about.h"
-//#include "coreshot/coreshotdialog.h"
 
 
 namespace Ui {
@@ -82,7 +80,6 @@ public slots:
 
 private slots:
     void showTime();
-    void coreBoxAbout();
     void actionshow();
     void on_corepad_clicked();
     void on_screenshot_clicked();
