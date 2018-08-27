@@ -1,7 +1,7 @@
 # CoreAction
 An app of CoreApps family.CoreAction is side bar for showing widgets.
 
-<img src="docs/screenshots/a1.png" width="500">
+<img src="CoreAction.png" width="500">
 
 ### Download
 
@@ -12,6 +12,8 @@ An app of CoreApps family.CoreAction is side bar for showing widgets.
 ### Dependencies:
 * qt5
 * libcprime
+* libcsys
+
 
 ## Tested In
 * Manjaro xfce (Arch).
