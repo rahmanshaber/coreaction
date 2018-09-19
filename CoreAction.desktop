@@ -4,6 +4,6 @@ Comment=CoreAction is side bar for showing widgets from CoreApps.
 Exec=coreaction
 Icon=/usr/share/coreapps/icons/CoreAction.svg
 Type=Application
-Categories=Utility;Core;Qt;
+Categories=Utility;Qt;
 Terminal=false
 StartupNotify=true
