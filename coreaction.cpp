@@ -62,7 +62,7 @@ void coreaction::tryicon()  //setup coreaction tryicon
     trayIconMenu->addAction(QAshow);
     trayIconMenu->addAction(QAquit);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setIcon(QIcon(":/app/icons/app-icons/CoreAction.svg"));
+    trayIcon->setIcon(QIcon(":/icons/coreaction.svg"));
     trayIcon->setToolTip("CoreAction");
     trayIcon->show();
 

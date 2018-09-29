@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=CoreAction
+Comment=CoreAction is side bar for showing widgets from CoreApps.
+Exec=coreaction
+Icon=/usr/share/coreapps/icons/coreaction.svg
+Type=Application
+Categories=Utility;Qt;
+Terminal=false
+StartupNotify=true

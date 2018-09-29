@@ -73,10 +73,10 @@ unix {
         target.path = $$BINDIR
 
         desktop.path = $$PREFIX/share/applications/
-        desktop.files = "CoreAction.desktop"
+        desktop.files = "coreaction.desktop"
 
         icons.path = $$PREFIX/share/coreapps/icons/
-        icons.files = icons/CoreAction.svg
+        icons.files = icons/coreaction.svg
 
         INSTALLS += target icons desktop
 }

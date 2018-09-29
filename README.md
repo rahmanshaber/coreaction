@@ -1,7 +1,7 @@
 # CoreAction
 An app of CoreApps family.CoreAction is side bar for showing widgets.
 
-<img src="CoreAction.png" width="500">
+<img src="coreaction.png" width="500">
 
 ### Download
 
