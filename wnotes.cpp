@@ -21,7 +21,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 wNotes::wNotes(QWidget *parent) :QWidget(parent),ui(new Ui::wNotes)
 {
     ui->setupUi(this);
-    Utilities::addDropShadow(this, 40);
+    CPrime::ThemeFunc::addDropShadow(this, 40);
 
     collectNotes();
 }

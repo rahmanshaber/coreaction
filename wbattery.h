@@ -22,7 +22,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QTime>
 
 #include <csys/upower.h>
-#include <cprime/utilities.h>
+#include <cprime/themefunc.h>
 
 
 namespace Ui {

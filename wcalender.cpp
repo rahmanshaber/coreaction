@@ -21,7 +21,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 wCalender::wCalender(QWidget *parent) :QWidget(parent),ui(new Ui::wCalender)
 {
     ui->setupUi(this);
-    Utilities::addDropShadow(this, 40);
+    CPrime::ThemeFunc::addDropShadow(this, 40);
 }
 
 wCalender::~wCalender()

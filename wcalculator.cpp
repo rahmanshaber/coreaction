@@ -25,7 +25,7 @@ int z = 0, varC, varD;
 wCalculator::wCalculator(QWidget *parent) :QWidget(parent),ui(new Ui::wCalculator)
 {
     ui->setupUi(this);
-    Utilities::addDropShadow(this, 40);
+    CPrime::ThemeFunc::addDropShadow(this, 40);
 
     ui->calcview->setValidator(new QDoubleValidator(0,99999999,99999999,this));
 }

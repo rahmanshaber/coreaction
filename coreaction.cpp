@@ -24,13 +24,13 @@ coreaction::coreaction(QWidget *parent) : QWidget(parent, Qt::Dialog),ui(new Ui:
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::CoreActionStyle));
+    setStyleSheet(CPrime::ThemeFunc::getStyleSheetFileContent(CPrime::StyleTypeName::CoreActionStyle));
 
     widget();
     widgetList();
     tryicon();
 
-    Utilities::addDropShadow(ui->appsW, 60, 50);
+    CPrime::ThemeFunc::addDropShadow(ui->appsW, 60, 50);
 }
 
 coreaction::~coreaction()
@@ -41,9 +41,9 @@ coreaction::~coreaction()
 void coreaction::widget()  //setup coreaction widget
 {
     // set window size
-    int x = static_cast<int>(Utilities::screensize().width()* .23);
-    int y = Utilities::screensize().height();
-    int sw = Utilities::screensize().width() - x;
+    int x = static_cast<int>(CPrime::InfoFunc::screenSize().width() * .23);
+    int y = CPrime::InfoFunc::screenSize().height();
+    int sw = CPrime::InfoFunc::screenSize().width()  - x;
 
     ui->widgetsL->setFixedWidth(x);
 
@@ -239,37 +239,37 @@ void coreaction::ShowWindow(QSystemTrayIcon::ActivationReason Reason)
 
 void coreaction::on_corepad_clicked()
 {
-    GlobalFunc::systemAppOpener("CorePad","");
+    CPrime::AppOpenFunc::systemAppOpener("CorePad","");
     this->hide();
 }
 
 void coreaction::on_screenshot_clicked()
 {
-    GlobalFunc::systemAppOpener("CoreShot","");
+    CPrime::AppOpenFunc::systemAppOpener("CoreShot","");
     this->hide();
 }
 
 void coreaction::on_corepaint_clicked()
 {
-    GlobalFunc::systemAppOpener("CorePaint","");
+    CPrime::AppOpenFunc::systemAppOpener("CorePaint","");
     this->hide();
 }
 
 void coreaction::on_corefm_clicked()
 {
-    GlobalFunc::systemAppOpener("CoreFM","");
+    CPrime::AppOpenFunc::systemAppOpener("CoreFM","");
     this->hide();
 }
 
 void coreaction::on_start_clicked()
 {
-    GlobalFunc::systemAppOpener("Start","");
+    CPrime::AppOpenFunc::systemAppOpener("Start","");
     this->hide();
 }
 
 void coreaction::on_search_clicked()
 {
-    GlobalFunc::systemAppOpener("Search","");
+    CPrime::AppOpenFunc::systemAppOpener("Search","");
     this->hide();
 }
 

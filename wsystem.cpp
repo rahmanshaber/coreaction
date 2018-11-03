@@ -22,7 +22,7 @@ wSystem::wSystem(QWidget *parent) :QWidget(parent),ui(new Ui::wSystem),
     info(InfoManager::ins())
 {
     ui->setupUi(this);
-    Utilities::addDropShadow(this, 40);
+    CPrime::ThemeFunc::addDropShadow(this, 40);
 
     checkSystem();
     QTimer *timer = new QTimer();

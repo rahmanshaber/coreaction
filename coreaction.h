@@ -37,7 +37,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QFile>
 #include <QDoubleValidator>
 
-#include <cprime/globalfunctions.h>
+#include <cprime/appopenfunc.h>
 #include <cprime/settingsmanage.h>
 
 
